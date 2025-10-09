@@ -46,7 +46,7 @@ export default defineConfig({
     host: true
   },
   build: {
-    outDir: 'dist-jsx',
+    outDir: 'dist',
     sourcemap: true,
     rollupOptions: {
       output: {
