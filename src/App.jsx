@@ -7,6 +7,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Homepage from './pages/Hompage';
 import ToolPage from './pages/ToolPage';
+import AnalyticsPage from './pages/AnalyticsPage';
 
 
 
@@ -28,6 +29,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Homepage onNavigate={handleNavigate} />} />
               <Route path="/tool" element={<ToolPage onNavigate={handleNavigate} />} />
+              <Route path="/analytics" element={<AnalyticsPage />} />
             </Routes>
           </Box>
           

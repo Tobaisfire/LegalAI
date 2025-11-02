@@ -240,8 +240,18 @@ const FileUploader = ({
             <Paper sx={{ p: 3 }}>
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 2 }}>
                 <FileIcon sx={{ fontSize: 40, color: 'primary.main' }} />
-                <Box sx={{ flex: 1 }}>
-                  <Typography variant="h6" fontWeight={600}>
+                <Box sx={{ flex: 1, minWidth: 0 }}>
+                  <Typography 
+                    variant="h6" 
+                    fontWeight={600}
+                    sx={{
+                      overflow: 'hidden',
+                      textOverflow: 'ellipsis',
+                      whiteSpace: 'nowrap',
+                      fontSize: '1rem'
+                    }}
+                    title={selectedFile.name}
+                  >
                     {selectedFile.name}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
