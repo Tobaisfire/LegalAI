@@ -70,7 +70,7 @@ const ToolPage = ({ onNavigate }) => {
       }
   
       // Get API URL from environment variable or default to localhost
-      const API_URL = import.meta.env.VITE_API_URL || "https://backend-legal-eight.vercel.app";
+      const API_URL = import.meta.env.VITE_API_URL || "https://backend-legal-eight.vercel.app" || "http://localhost:8000";
       const response = await fetch(`${API_URL}/api/summarize`, {
         method: 'POST',
         body: formData,
