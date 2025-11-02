@@ -69,8 +69,11 @@ const ToolPage = ({ onNavigate }) => {
         formData.append('text', pastedText.trim());
       }
   
-      // Get API URL from environment variable or default to localhost
-      const API_URL = import.meta.env.VITE_API_URL || "https://backend-legal-eight.vercel.app" || "http://localhost:8000";
+      // Get API URL from environment variable or default to production backend
+      let API_URL = import.meta.env.VITE_API_URL || "https://backend-legal-orpin.vercel.app";
+      // Remove trailing slash if present to avoid double slashes
+      API_URL = API_URL.replace(/\/+$/, '');
+      
       const response = await fetch(`${API_URL}/api/summarize`, {
         method: 'POST',
         body: formData,
